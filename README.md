@@ -94,3 +94,10 @@ When working with bare metal:
 
 * MPIDR identifies processor affinity in multi-core boot scenarios.
 * Primary core initializes system settings for boot.
+
+
+
+
+## Refrences
+
+https://developer.arm.com/documentation/den0024/a/?lang=en
