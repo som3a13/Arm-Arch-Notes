@@ -56,7 +56,7 @@ When working with bare metal:
 * **PC:** Program Counter.
 * **SP:** Stack Pointer.
 * **ELR:** Exception Link Register.
-* **MPIDR:** Multiprocessor Affinity Register, identifies processors in multi-core systems.
+* **SPSR:**Saved Process Status Register
 
 ## Additional ARM Architecture Details
 
@@ -82,21 +82,23 @@ When working with bare metal:
 ### ARM Registers
 
 * General Purpose Registers (GPR): x0-x30 (64-bit), w0-w30 (32-bit).
-* CPSR: Current Program Status Register.
+* CPSR: Current Program Status Register , current program state register in arvm8 > Processor state
+* *ALU flags like Zero, Carry, Overflow etc are stored in PSTATE / CPSR*
 * SPSR: Saved Program Status Register, stores CPSR of current mode.
+* Pstate loaded in SPSR ,
+* **MPIDR:** Multiprocessor Affinity Register, identifies processors in multi-core systems.
 
 ### Exceptions and Interrupts
 
 * Sync exceptions for system calls, async for interrupts.
+* Sync : system level calls [transition between E level] , async : interrupts IQR,FIQ OR  system error
 * Special registers like PC, SP, and ELR manage exception handling.
+* *When exception happens it will be loaded to ELR , pc will point to it*/
 
 ### Multi-core Systems
 
 * MPIDR identifies processor affinity in multi-core boot scenarios.
 * Primary core initializes system settings for boot.
-
-
-
 
 ## Refrences
 
