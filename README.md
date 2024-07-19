@@ -85,7 +85,7 @@ When working with bare metal:
 * CPSR: Current Program Status Register , current program state register in arvm8 > Processor state
 * *ALU flags like Zero, Carry, Overflow etc are stored in PSTATE / CPSR*
 * SPSR: Saved Program Status Register, stores CPSR of current mode.
-* Pstate loaded in SPSR ,
+* Pstate loaded in SPSR , pc stored in LR
 * **MPIDR:** Multiprocessor Affinity Register, identifies processors in multi-core systems.
 
 ### Exceptions and Interrupts
