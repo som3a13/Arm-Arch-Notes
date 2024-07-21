@@ -99,6 +99,15 @@ When working with bare metal:
 
 * MPIDR identifies processor affinity in multi-core boot scenarios.
 * Primary core initializes system settings for boot.
+* 
+* **SMP** : The Cortex-A72 natively supports SMP, making it suitable for environments where all cores are used equally to run tasks or processes in a symmetric manner.
+* **AMP** : While not the primary focus, the Cortex-A72 can be utilized in AMP configurations if you design the system to have asymmetric core roles or use a hypervisor to manage different operating systems or tasks on different cores.
+
+**to know :**
+
+* **Hypervisor** : Manages VMs and assigns cores to them.
+* **Virtualization** : Allows multiple OS instances to run concurrently on the same hardware, with the hypervisor ensuring isolation and resource management.
+* **Heterogeneous Multi-Processing (HMP)** :HMP involves a system with heterogeneous cores, such as a combination of high-performance and low-power cores. This setup can optimize performance and power consumption by dynamically assigning tasks to the most suitable core type.
 
 ## Refrences
 
